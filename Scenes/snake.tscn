@@ -1,0 +1,12 @@
+[gd_scene load_steps=2 format=3 uid="uid://buqrdel2ukwnl"]
+
+[ext_resource type="Script" path="res://Code/snake.gd" id="1_vfsoc"]
+
+[node name="Snake" type="Node2D"]
+script = ExtResource("1_vfsoc")
+
+[node name="move delay" type="Timer" parent="."]
+wait_time = 0.15
+autostart = true
+
+[connection signal="timeout" from="move delay" to="." method="_on_move_delay_timeout"]

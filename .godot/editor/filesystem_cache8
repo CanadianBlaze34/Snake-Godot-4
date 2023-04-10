@@ -1,0 +1,13 @@
+2a60927148abd1d33b818b535e306557
+::res://::1681143436
+::res://Code/::1681143204
+grid.gd::GDScript::-1::1681133695::0::1::::Grid<>Node2D<>::
+main.gd::GDScript::-1::1681143049::0::1::::<>Node2D<>::
+snake.gd::GDScript::-1::1681143204::0::1::::Snake<>Node2D<>::
+::res://images/::1681139521
+icon.png::CompressedTexture2D::475501672655534502::1681138757::1681139521::1::::<><>::
+icon.svg::CompressedTexture2D::37575396124533879::1681139024::1681139521::1::::<><>::
+::res://Scenes/::1681143257
+grid.tscn::PackedScene::1913889809983204125::1681139215::0::1::::<><>::res://Code/grid.gd
+snake.tscn::PackedScene::3824265375117600973::1681139031::0::1::::<><>::res://Code/snake.gd
+world.tscn::PackedScene::5880368563989314279::1681143257::0::1::::<><>::res://Code/main.gd

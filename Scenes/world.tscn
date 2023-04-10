@@ -1,0 +1,62 @@
+[gd_scene load_steps=2 format=3 uid="uid://cp1q2twd6hqmh"]
+
+[ext_resource type="Script" path="res://Code/main.gd" id="1_sbuyb"]
+
+[node name="World" type="Node2D"]
+script = ExtResource("1_sbuyb")
+cell_size = Vector2(80, 80)
+
+[node name="Background" type="ColorRect" parent="."]
+z_index = -1
+offset_right = 1280.0
+offset_bottom = 720.0
+color = Color(0.262745, 0.529412, 0.788235, 1)
+
+[node name="Score" type="Label" parent="Background"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(0.227451, 0.486275, 0.733333, 1)
+theme_override_font_sizes/font_size = 280
+text = "000"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="HUD" type="ColorRect" parent="."]
+visible = false
+offset_right = 1280.0
+offset_bottom = 720.0
+color = Color(0, 0, 0, 0.352941)
+
+[node name="Score" type="Label" parent="HUD"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(0.227451, 0.486275, 0.733333, 1)
+theme_override_font_sizes/font_size = 280
+text = "000"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="retry" type="Button" parent="HUD"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 515.0
+offset_top = 500.0
+offset_right = -515.0
+offset_bottom = -140.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(0.227451, 0.486275, 0.733333, 1)
+theme_override_font_sizes/font_size = 52
+text = "Retry"
+
+[connection signal="pressed" from="HUD/retry" to="." method="_on_retry_pressed"]
