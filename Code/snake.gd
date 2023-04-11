@@ -12,7 +12,7 @@ var screen_size := DisplayServer.window_get_size()
 var last_direction := Vector2.ZERO
 var moved_since_new_direction := true
 var sprites : Array[ColorRect] = []
-var _add_body := false
+var _add_body := 0
 
 const HEAD : int = 0
 
@@ -34,8 +34,8 @@ func _move() -> void:
 	var new_head := _create_color_rect('Head', get_head().position + last_direction * sprite_size)
 	sprites.insert(0, new_head)
 	# remove the oldest color rect when not adding a body
-	if _add_body:
-		_add_body = false
+	if _add_body != 0:
+		_add_body -= 1
 	else:
 		var last_index := sprites.size() - 1
 		remove_child(sprites[last_index])
@@ -121,8 +121,8 @@ func _create_color_rect(_name : String, _position : Vector2) -> ColorRect:
 	add_child(color_rect)
 	return color_rect
 
-func add_body() -> void:
-	_add_body = true
+func add_body(increment : int) -> void:
+	_add_body = increment
 
 func positions() -> Array[Vector2]:
 	var _positions : Array[Vector2] = []

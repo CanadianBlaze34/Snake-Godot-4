@@ -1,2 +1,3 @@
 res://Scenes/world.tscn
 res://Code/snake.gd
+res://Code/main.gd
